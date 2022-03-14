@@ -1,0 +1,119 @@
+<?php
+	$FacebookPixel = $_GET['p'];
+	$Ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	$http_lang = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+	$fd = fopen("../logs.txt", 'a+');
+	$date = date('d.m.Y, H:i:s');
+	$arr = $date.'|'.$_SERVER['HTTP_CF_IPCOUNTRY'].'|'.$http_lang.'|'.$_SERVER['HTTP_REFERER'].'|'.$_SERVER['HTTP_USER_AGENT'].'|'.$Ip."|land \r\n";
+	fwrite($fd, $arr);
+	fclose($fd);
+	$gp = $_GET['gp'];
+  $hs = $_GET['hs'];
+  $page_lang = "ru";
+	$QUERY=$_SERVER["QUERY_STRING"];
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $page_lang; ?>">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="./img/fav-16_16.ico" sizes="16x16">
+  <link rel="icon" type="image/x-icon" href="./img/fav-32_32.ico" sizes="32x32">
+  <link rel="icon" type="image/x-icon" href="./img/fav-96_96.ico" sizes="96x96">
+  <link rel="icon" type="image/x-icon" href="./img/fav-120_120.ico" sizes="120x120">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://usahomerelief.net/adict/intlTelInput.css" />
+  <link rel="stylesheet" href="https://usahomerelief.net/adict/adict.css" />
+
+  <title>KO-FISCH</title>
+</head>
+
+<body class="page">
+  <%= _.template(require("./templates/header.html"))(data) %>
+    <%= _.template(require("./templates/first.html"))(data) %>
+      <%= _.template(require("./templates/second.html"))(data) %>
+        <%= _.template(require("./templates/third.html"))(data) %>
+          <%= _.template(require("./templates/fourth.html"))(data) %>
+            <!-- <%= _.template(require("./templates/fifth.html"))(data) %> -->
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://usahomerelief.net/adict/intlTelInput.js"></script>
+            <script src="https://usahomerelief.net/adict/adict.js"></script>
+            <script src="https://usahomerelief.net/adict/utils.js"></script>
+            <!--add id="video" to the video tag before linking next script -->
+            <script src="https://usahomerelief.net/video/video.js"></script>
+
+            <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+            <script>
+              $(".scroll-btn").each(function () {
+                $(this).click((e) => {
+                  e.preventDefault();
+                  $("html").animate(
+                    {
+                      scrollTop: $(".form").offset().top,
+                    },
+                    800
+                  );
+                });
+              });
+
+              $(".scroll-btn-two").each(function () {
+                $(this).click((e) => {
+                  e.preventDefault();
+                  $("html").animate(
+                    {
+                      scrollTop: $(".first").offset().top,
+                    },
+                    800
+                  );
+                });
+              });
+
+              $(".scroll-btn-three").each(function () {
+                $(this).click((e) => {
+                  e.preventDefault();
+                  $("html").animate(
+                    {
+                      scrollTop: $(".second").offset().top,
+                    },
+                    800
+                  );
+                });
+              });
+
+              $(".scroll-btn-four").each(function () {
+                $(this).click((e) => {
+                  e.preventDefault();
+                  $("html").animate(
+                    {
+                      scrollTop: $(".third").offset().top,
+                    },
+                    800
+                  );
+                });
+              });
+
+              $(".scroll-btn-five").each(function () {
+                $(this).click((e) => {
+                  e.preventDefault();
+                  $("html").animate(
+                    {
+                      scrollTop: $(".fourth").offset().top,
+                    },
+                    800
+                  );
+                });
+              });
+            </script>
+
+</body>
+
+</html>

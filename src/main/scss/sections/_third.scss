@@ -1,0 +1,148 @@
+.third {
+  padding: 60px 0;
+
+  background: #6d60ca;
+
+  @include for-size(desktop) {
+    padding: 120px 0;
+  }
+}
+
+.third__title {
+  margin: 0 0 37px;
+
+  @include font(bold, 24px, 1.2);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  @include for-size(desktop) {
+    @include font(bold, 52px, 1.2);
+    text-align: left;
+  }
+}
+
+.br {
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.third__title--part {
+  color: #44e5ae;
+}
+
+.third__list {
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: unset;
+    margin: -75px 0 0 0;
+  }
+}
+
+.third__list-item {
+  padding: 32px 16px;
+  background: #c5bfea;
+  border-radius: 16px;
+
+  @include for-size(desktop) {
+    width: 373px;
+    // height: 412px;
+    padding: 50px 48px;
+  }
+}
+
+.third__list-item:not(:last-child) {
+  margin-bottom: 32px;
+
+  @include for-size(desktop) {
+    margin: 0;
+  }
+}
+
+.third__list-item:nth-child(2) {
+  background: #e4dffe;
+
+  @include for-size(desktop) {
+    // height: 523px;
+  }
+}
+
+.third__list-item:nth-child(3) {
+  background: #ffffff;
+}
+
+.third__list-item-title {
+  margin: 0;
+
+  @include font(300, 32px, 1.75);
+
+  color: #000000;
+}
+
+.third__list-item-price {
+  margin: 0 0 24px;
+
+  @include font(bold, 24px, 1.2);
+
+  color: #6d60ca;
+}
+
+.third__list-item-check {
+  display: flex;
+  align-items: center;
+}
+
+.third__list-item-check:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.third__list-item-check-img {
+  min-width: 18px;
+  min-height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  margin-right: 7px;
+}
+
+.third__list-item-check-text {
+  margin: 0;
+
+  @include font(normal, 12px, 1.2);
+
+  color: #000000;
+}
+
+.third__list-item-btn {
+  width: 100%;
+  padding: 14px 65px;
+  margin: 22px 0 0;
+
+  @include font(800, 18px, 1.2);
+  text-align: center;
+
+  color: #ffffff;
+  background: #44e5ae;
+  box-shadow: 0px 24px 48px rgba(50, 54, 72, 0.24);
+  border-radius: 16px;
+  cursor: pointer;
+
+  @include for-size(desktop) {
+    margin: 42px 0 0;
+  }
+}
+
+.third__list-item-btn:active,
+.third__list-item-btn:focus,
+.third__list-item-btn:hover {
+  background: #6d60ca;
+}

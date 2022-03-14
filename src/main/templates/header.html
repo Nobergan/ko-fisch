@@ -1,0 +1,106 @@
+<section class="header">
+  <div class="container">
+
+    <div class="header__top">
+      <svg class="header__logo">
+        <use href="../img/sprite.svg#icon-logo"></use>
+      </svg>
+
+      <ul class="header__top-list">
+        <li class="header__top-list-item">Главная</li>
+        <li class="header__top-list-item scroll-btn-two">Направления</li>
+        <li class="header__top-list-item scroll-btn-three">Обучение</li>
+        <li class="header__top-list-item scroll-btn-four">Цены</li>
+        <li class="header__top-list-item scroll-btn-five">Вопросы</li>
+      </ul>
+
+      <button type="button" class="header__btn scroll-btn">НАЧАТЬ</button>
+    </div>
+
+    <h1 class="header__title"><span class="header__title--part">Финансовая грамотность</span> — залог
+      не только сохранения средств, но и их преумножения</h1>
+    <p class="header__text">Мы обучим вас финансовой грамотности, а ПОТОМ уже трейдингу!</p>
+
+    <ul class="header__list">
+      <li class="header__list-item part-size">
+        <p class="header__list-item-title"><span class="header__list-item-part part-size">7</span> лет</p>
+        <p class="header__list-item-text">на рынке</p>
+      </li>
+      <li class="header__list-item">
+        <p class="header__list-item-title">более <span class="header__list-item-part">9.000</span></p>
+        <p class="header__list-item-text">За это время обучено человек</p>
+      </li>
+      <li class="header__list-item">
+        <p class="header__list-item-title"><span class="header__list-item-part">82%</span></p>
+        <p class="header__list-item-text">наших клиентов остались
+          довольны</p>
+      </li>
+      <li class="header__list-item">
+        <p class="header__list-item-title"><span class="header__list-item-part">20.000+</span></p>
+        <p class="header__list-item-text">Разработано персональных торговых стратегий</p>
+      </li>
+    </ul>
+
+    <form id="userPhoneForm" class="form" method="POST">
+      <ul class="form__list">
+        <li class="form__list-item">
+          <div class="form__list-item-num">1</div>
+          <p class="form__list-item-text">Регистрация</p>
+        </li>
+        <li class="form__list-item">
+          <div class="form__list-item-num">2</div>
+          <p class="form__list-item-text">Консультация</p>
+        </li>
+        <li class="form__list-item">
+          <div class="form__list-item-num">3</div>
+          <p class="form__list-item-text">Обучение</p>
+        </li>
+        <li class="form__list-item">
+          <div class="form__list-item-num">4</div>
+          <p class="form__list-item-text">PROFIT</p>
+        </li>
+      </ul>
+
+      <div class="input_wrapper">
+        <div>
+          <input name="f_name" placeholder="Ваше имя" class="form__input" id="form-name" />
+        </div>
+        <div>
+          <input name="l_name" placeholder="Ваша фамилия">
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="Ваш e-mail" class="form__input" id="form-email" />
+        </div>
+        <div>
+          <style>
+            .iti__flag-container {
+              z-index: 50;
+            }
+
+            .iti-mobile .iti__country-list {
+              width: 85%;
+            }
+          </style>
+          <input type="tel" name="phone" placeholder="Ваш телефон" autocomplete="off" required>
+          <input type="hidden" name="phone2" class="phone2" autocomplete="off" required>
+          <!-- Use variable from gep parameter @ first line - from php code in top of file -->
+          <input type="hidden" name="pixel_id" value="<?php echo $FacebookPixel?>">
+          <input type="hidden" name="page_lang" value="<?php echo $page_lang?>">
+          <input type="hidden" name="query" value="<?php echo $QUERY?>" />
+          <input type="hidden" name="gp_id" value="<?php echo $gp?>" />
+          <input type="hidden" name="hs_id" value="<?php echo $hs?>" />
+          <!-- change to actual name of Landing. Name with uppercased letters -->
+          <input type="hidden" name="landing" value="KO-FISCH">
+          <!-- Campain must be in every landing pages except Kazakhstan, Russian and Russian-speaking countries -->
+          <input type="hidden" name="campaign" value="SG">
+          <!-- for arabian landings set value of campaign GCC, if arabian landings in english - use AR -->
+        </div>
+
+        <button class="form__btn" type="submit">
+          ОСТАВИТЬ ЗАЯВКУ
+        </button>
+      </div>
+    </form>
+
+  </div>
+</section>

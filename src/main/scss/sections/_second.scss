@@ -1,0 +1,137 @@
+.second {
+  padding: 60px 0;
+
+  background-image: url("../../img/second/second-bg-one-mob.png"),
+    url("../../img/second/second-bg-two-mob.png");
+  background-repeat: no-repeat;
+  background-position: 0 20%, 0 75%;
+  background-size: contain;
+
+  @include for-size(desktop) {
+    padding: 120px 0;
+
+    background-image: url("../../img/second/second-bg-one-desk.png"),
+      url("../../img/second/second-bg-two-desk.png");
+    background-size: unset;
+    background-position: 96px 27%, 88% 82%;
+  }
+}
+
+.second__title {
+  margin: 0 0 30px;
+
+  @include font(bold, 24px, 1.2);
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  @include for-size(desktop) {
+    margin: 0 0 60px;
+
+    @include font(bold, 40px, 1.2);
+  }
+}
+
+.second__list {
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @include for-size(desktop) {
+    max-width: 963px;
+    margin-bottom: 68px;
+  }
+}
+
+.second__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.second__list-item:nth-child(2n) {
+  @include for-size(desktop) {
+    justify-content: flex-end;
+  }
+}
+
+.second__list-item:nth-child(2n + 1) {
+  @include for-size(desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.second__list-item-box {
+  margin-right: 13px;
+
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.second__list-item-box:nth-child(2n) {
+  margin-left: 13px;
+  margin-right: 0;
+}
+
+.second__list-item-box-desk {
+  display: none;
+
+  @include for-size(desktop) {
+    display: block;
+    margin-right: 16px;
+  }
+}
+
+.second__list-item-box-desk:nth-child(2n + 1) {
+  @include for-size(desktop) {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+
+.second__list-item-img {
+  width: 66px;
+  height: 66px;
+
+  @include for-size(desktop) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.desk-marg {
+  @include for-size(desktop) {
+    margin-left: 15px;
+  }
+}
+
+.second__notice {
+  width: 100%;
+  max-width: 425px;
+  margin: 40px auto 0;
+  padding: 20px 15px;
+
+  @include font(600, 14px, 1.2);
+  text-align: center;
+
+  color: #000000;
+  background: #dafaef;
+  border-radius: 6px;
+
+  @include for-size(desktop) {
+    width: 100%;
+    max-width: 963px;
+    padding: 32px 115px;
+
+    @include font(600, 16px, 1.2);
+  }
+}
